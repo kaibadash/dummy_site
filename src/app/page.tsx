@@ -5,6 +5,7 @@ import TextForm from "./components/TextForm";
 import ImageForm from "./components/ImageForm";
 import { useState } from 'react';
 import CurrentTime from "./components/CurrentTime";
+import Logo from './resources/satoutyouzu_bg_black.png';
 
 export default function Home() {
   const [showTextForm, setShowTextForm] = useState(false);
@@ -19,8 +20,8 @@ export default function Home() {
   return (
     <div className="bg-green-100 text-green-800 p-6">
       <main className="space-y-4">
-        <Image 
-          src="/satoutyouzu_bg_black.png" 
+        <img 
+          src={Logo.src}
           alt="Logo" 
           width={100}
           height={100}
