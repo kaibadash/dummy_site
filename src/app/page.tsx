@@ -1,5 +1,4 @@
 'use client'
-import Image from "next/image";
 import Login from "./components/Login";
 import TextForm from "./components/TextForm";
 import ImageForm from "./components/ImageForm";
