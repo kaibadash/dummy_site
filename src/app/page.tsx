@@ -27,11 +27,15 @@ export default function Home() {
           className="mx-auto"
         />
         <h1 className="text-green-900 text-center">Dummy Site</h1>
-        <CurrentTime />
+        <p>You can log in using an ID and password that start with "test".</p>
         {!isLoggedIn && <Login onLoginSuccess={handleLoginSuccess} />}
+        {isLoggedIn && <CurrentTime />}
         {showTextForm && <TextForm />}
         {showImageForm && <ImageForm />}
       </main>
+      <footer className="text-center">
+        <a href="https://github.com/kaibadash/dummy_site">GitHub</a>
+      </footer>
     </div>
   );
 }

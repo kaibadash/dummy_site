@@ -19,6 +19,7 @@ const TextForm: React.FC = () => {
     return (
         <form onSubmit={handleSubmit}>
             <input
+                id="text-input"
                 type="text"
                 className="input-default" 
                 value={text}
