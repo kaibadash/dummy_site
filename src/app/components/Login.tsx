@@ -18,7 +18,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
     }, []);
 
     const handleLogin = () => {
-        if (id === 'test' && password.startsWith('test')) {
+        if (id.startsWith('test') && password.startsWith('test')) {
             setMessage('ログイン成功');
             onLoginSuccess();
         } else {
