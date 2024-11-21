@@ -27,7 +27,7 @@ export default function Home() {
           className="mx-auto"
         />
         <h1 className="text-green-900 text-center">Dummy Site</h1>
-        <p>You can log in using an ID and password that start with "test".</p>
+        <p>You can log in using an ID and password that start with test.</p>
         {!isLoggedIn && <Login onLoginSuccess={handleLoginSuccess} />}
         {isLoggedIn && <CurrentTime />}
         {showTextForm && <TextForm />}
