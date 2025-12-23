@@ -4,6 +4,7 @@ import TextForm from "./components/TextForm";
 import ImageForm from "./components/ImageForm";
 import { useState } from 'react';
 import CurrentTime from "./components/CurrentTime";
+import BusinessHours from "./components/BusinessHours";
 import Logo from './resources/satoutyouzu_bg_black.png';
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
         />
         <h1 className="text-green-900 text-center">Dummy Site</h1>
         <p>You can log in using an ID and password that start with test.</p>
+        <BusinessHours />
         {!isLoggedIn && <Login onLoginSuccess={handleLoginSuccess} />}
         {isLoggedIn && <CurrentTime />}
         {showTextForm && <TextForm />}
