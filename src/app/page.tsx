@@ -1,7 +1,6 @@
 'use client'
 import Login from "./components/Login";
 import TextForm from "./components/TextForm";
-import ImageForm from "./components/ImageForm";
 import { useState } from 'react';
 import CurrentTime from "./components/CurrentTime";
 import BusinessHours from "./components/BusinessHours";
@@ -9,12 +8,10 @@ import Logo from './resources/satoutyouzu_bg_black.png';
 
 export default function Home() {
   const [showTextForm, setShowTextForm] = useState(false);
-  const [showImageForm, setShowImageForm] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLoginSuccess = () => {
     setShowTextForm(true);
-    setShowImageForm(true);
     setIsLoggedIn(true);
   };
   return (
@@ -28,12 +25,11 @@ export default function Home() {
           className="mx-auto"
         />
         <h1 className="text-green-900 text-center">Dummy Site</h1>
-        <p>You can log in using an ID and password that start with test.</p>
+        <p>You can log in using an ID and password that start with `test`.</p>
         <BusinessHours />
         {!isLoggedIn && <Login onLoginSuccess={handleLoginSuccess} />}
         {isLoggedIn && <CurrentTime />}
         {showTextForm && <TextForm />}
-        {showImageForm && <ImageForm />}
       </main>
       <footer className="text-center">
         <a href="https://github.com/kaibadash/dummy_site">GitHub</a>
